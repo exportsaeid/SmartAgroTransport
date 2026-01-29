@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA"
+    android:padding="16dp">
+
+    <!-- هدر -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:id="@+id/backButtonDelivery"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="برگشت"
+            app:tint="#424242" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="تحویل نهایی به خریدار"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- جستجو -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="جستجو در بارگیری‌ها..."
+        android:layout_marginBottom="16dp" />
+
+    <!-- پیام وقتی لیست خالی است -->
+    <TextView
+        android:id="@+id/tvEmptyBuyerDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="هیچ بارگیری آماده تحویل به خریدار وجود ندارد.\nابتدا تحویل به ترخیص‌کار عراقی را ثبت کنید."
+        android:textSize="18sp"
+        android:textColor="#757575"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone" />
+
+    <!-- لیست -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBuyerDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
