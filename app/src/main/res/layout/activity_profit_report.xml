@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA"
+    android:padding="16dp"
+    android:layoutDirection="ltr">
+
+    <!-- هدر با ایموجی -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/backButtonProfit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="برگشت"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="6dp"
+            app:tint="#1976D2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📊 گزارش سود و زیان"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:letterSpacing="0.02" />
+
+    </LinearLayout>
+
+    <!-- کارت جمع کل سود/ضرر با ایموجی -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/tvTotalProfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💰 جمع کل سود/زیان: در حال محاسبه..."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:gravity="center"
+            android:padding="16dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- جستجو با ایموجی -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewProfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="جستجو بر اساس شماره فاکتور یا نام خریدار..."
+        android:layout_marginBottom="16dp" />
+
+    <!-- پیام وقتی لیست خالی است با ایموجی -->
+    <TextView
+        android:id="@+id/tvEmptyProfit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="📭 هیچ فاکتور تکمیل شده‌ای (تحویل به خریدار) وجود ندارد.\n🔄 پس از ثبت تحویل به خریدار، گزارش نمایش داده می‌شود."
+        android:textSize="18sp"
+        android:textColor="#757575"
+        android:gravity="center"
+        android:lineSpacingExtra="8dp"
+        android:visibility="gone" />
+
+    <!-- لیست گزارش -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProfit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+
+</LinearLayout>

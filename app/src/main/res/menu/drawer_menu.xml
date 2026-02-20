@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_create_invoice"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="ایجاد فاکتور جدید" />
+
+    <item
+        android:id="@+id/nav_invoice_list"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="لیست فاکتورها" />
+
+    <item
+        android:id="@+id/nav_load_invoice"
+        android:icon="@drawable/local_shipping"
+        android:title="بارگیری فاکتور" />
+
+    <item
+        android:id="@+id/nav_clearance"
+        android:icon="@android:drawable/ic_menu_mylocation"
+        android:title="ترخیص مرز" />
+
+    <!-- آیتم جدید: تحویل نهایی به خریدار -->
+    <item
+        android:id="@+id/nav_buyer_delivery"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="تحویل به خریدار" />
+
+
+    <item
+        android:id="@+id/nav_map"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="نمایش نقشه" />
+    <item
+        android:id="@+id/nav_profit_report"
+        android:icon="@drawable/trending_up"
+        android:title="گزارش سود و ضرر" />
+    <item
+        android:id="@+id/nav_backup"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="پشتیبان گیری از اطلاعات" />
+
+    <item
+        android:id="@+id/nav_restore"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="بازگردانی اطلاعات" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="تنظیمات" />
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="درباره اپ" />
+    <item
+        android:id="@+id/nav_contact"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="ارتباط با ما" />
+
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="خروج از برنامه" />
+
+</menu>

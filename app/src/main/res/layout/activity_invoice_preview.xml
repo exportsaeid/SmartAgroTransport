@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- هدر بالای صفحه با ایموجی -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#1976D2"
+            android:layoutDirection="ltr"
+            android:padding="16dp">
+
+            <!-- فلش برگشت -->
+            <ImageView
+                android:id="@+id/backButtonPish"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="برگشت"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="6dp"
+                app:tint="@android:color/white" />
+
+            <!-- عنوان پیش‌نمایش با ایموجی -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="📄 پیش‌نمایش فاکتور"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.02" />
+
+            <!-- فضای خالی برای تعادل -->
+            <View
+                android:layout_width="36dp"
+                android:layout_height="36dp" />
+
+        </LinearLayout>
+
+        <!-- اطلاعات مشتری و تاریخ با ایموجی -->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/customerInfoLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/headerLayout"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layoutDirection="rtl"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingHorizontal="16dp"-->
+<!--            android:background="@android:color/white"-->
+<!--            android:layout_marginHorizontal="16dp"-->
+<!--            app:cardElevation="2dp"-->
+<!--            android:paddingVertical="12dp"-->
+<!--            android:elevation="2dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvPreviewCustomer"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:text="👤 مشتری: نام مشتری - 📞 تماس: شماره تماس"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="#333333"-->
+<!--                android:drawablePadding="8dp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvPreviewDate"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="📅 تاریخ: ۱۴۰۴/۱۰/۰۱"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="#666666"-->
+<!--                android:drawablePadding="8dp" />-->
+<!--        </LinearLayout>-->
+        <!-- اطلاعات مشتری و تاریخ با ایموجی -->
+        <LinearLayout
+            android:id="@+id/customerInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerLayout"
+            android:layout_marginTop="20dp"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:background="@android:color/white"
+            android:layout_marginHorizontal="16dp"
+            app:cardElevation="2dp"
+            android:paddingVertical="12dp"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreviewCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="👤  نام مشتری - 📞  شماره تماس"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPreviewDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📅 تاریخ: ۱۴۰۴/۱۰/۰۱"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+        <!-- محتوای اصلی جدول -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomActionContainer"
+            android:layout_below="@id/customerInfoLayout"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="16dp"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- هدر جدول با ایموجی -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#1976D2"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="14dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="🔢 ردیف"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="🥬 نام محصول"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="⚖️ وزن"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="💰 قیمت واحد"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="👤 فروشنده"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="📞 تماس"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="📍 آدرس"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="💰 جمع"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- محتوای جدول با قابلیت اسکرول عمودی -->
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5F5F5"
+                    android:layoutDirection="rtl"
+                    android:maxHeight="300dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:id="@+id/tableItems"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="#FFFFFF"
+                            android:stretchColumns="*"
+                            android:textAlignment="center"
+                            android:layoutDirection="rtl" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- دکمه PDF در پایین ثابت با ایموجی -->
+        <LinearLayout
+            android:id="@+id/bottomActionContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:elevation="16dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- جمع کل با ایموجی -->
+            <TextView
+                android:id="@+id/tvPreviewTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="12dp"
+                android:text="💰 جمع کل قابل پرداخت: ۰ تومان"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:background="#F0F7FF"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="8dp" />
+
+            <!-- دکمه صدور PDF فاکتور با ایموجی -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_export_pdf"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="4dp"
+                android:text="📄 صدور PDF فاکتور"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="#4CAF50"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_save"
+                app:iconGravity="textStart"
+                app:iconPadding="16dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

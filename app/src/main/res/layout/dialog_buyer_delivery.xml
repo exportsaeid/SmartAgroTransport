@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl">
+
+        <!-- عنوان دیالوگ با ایموجی (از طریق جاوا تنظیم می‌شود) -->
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📦 تحویل به خریدار"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- شماره فاکتور (از طریق جاوا تنظیم می‌شود) -->
+        <TextView
+            android:id="@+id/tvInvoiceNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧾 فاکتور #"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- نام تحویل‌گیرنده (خریدار) با ایموجی -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="👤 نام تحویل‌گیرنده (خریدار)"
+            android:layout_marginBottom="16dp"
+            android:layoutDirection="rtl"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="#FF9800"
+            app:hintTextColor="#FF9800"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBuyerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:gravity="right"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- تلفن خریدار با ایموجی -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="📞 تلفن خریدار"
+            android:layout_marginBottom="16dp"
+            android:layoutDirection="rtl"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="#FF9800"
+            app:hintTextColor="#FF9800"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBuyerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:gravity="right"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- شماره حجره خریدار با ایموجی -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="🏪 شماره حجره خریدار"
+            android:layout_marginBottom="16dp"
+            android:layoutDirection="rtl"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="#FF9800"
+            app:hintTextColor="#FF9800"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHajraNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:gravity="right"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- مبلغ دریافت شده با ایموجی -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="💰 مبلغ دریافت شده (تومان)"
+            android:layout_marginBottom="16dp"
+            android:layoutDirection="rtl"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="#FF9800"
+            app:hintTextColor="#FF9800"
+            app:endIconMode="clear_text"
+            app:placeholderText="مثال: ۱۰۰,۰۰۰,۰۰۰">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etReceivedAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:gravity="right"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- تاریخ تحویل با ایموجی -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="📅 تاریخ تحویل"
+            android:layout_marginBottom="16dp"
+            android:layoutDirection="rtl"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="#FF9800"
+            app:hintTextColor="#FF9800"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPersianDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:layoutDirection="rtl"
+                android:gravity="right"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:clickable="true"
+                android:focusableInTouchMode="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- توضیحات با ایموجی - با maxLines محدود شده -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="📝 توضیحات (روش پرداخت، امضا، وضعیت تحویل و ...)"
+            android:layout_marginBottom="16dp"
+            android:layoutDirection="rtl"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="#FF9800"
+            app:hintTextColor="#FF9800"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:gravity="right"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+            android:scrollbars="vertical" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- خط جداکننده -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- دکمه‌ها با ایموجی -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layoutDirection="ltr"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="❌ لغو"
+                android:textColor="#757575"
+                android:textSize="16sp"
+                app:cornerRadius="12dp"
+                app:strokeColor="#757575"
+                app:strokeWidth="2dp"
+                app:backgroundTint="@android:color/transparent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="💾 ذخیره"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#FF9800"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#F5F5F5">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewInTransit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="جستجو در بارگیری‌های در راه..."
+        android:iconifiedByDefault="false"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvEmptyInTransit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="هیچ بارگیری در راهی وجود ندارد"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:visibility="gone"
+        android:padding="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerInTransit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:elevation="4dp" />
+
+</LinearLayout>
