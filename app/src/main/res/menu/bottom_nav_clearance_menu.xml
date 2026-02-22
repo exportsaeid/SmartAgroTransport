@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_in_transit"
+        android:icon="@drawable/ic_in_transit"
+        android:title="🚚 در راه مرز" />
+
+    <item
+        android:id="@+id/nav_cleared"
+        android:icon="@drawable/ic_cleared"
+        android:title="✅ ترخیص شده" />
+
+</menu>

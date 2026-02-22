@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- تولبار -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent" />
+
+        <!-- لوگو و نام اپ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+
+                android:elevation="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="فاکتور هوشمند کشاورزی"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نسخه 1.0.0"
+                android:textSize="14sp"
+                android:textColor="@color/secondary_text"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- کارت اطلاعات -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginTop="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layoutDirection="rtl"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ویژگی‌های اپلیکیشن"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"/>
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✓ مدیریت آسان فاکتورهای کشاورزی\n✓ محاسبه خودکار سود و زیان\n✓ گزارش‌گیری حرفه‌ای\n✓ پشتیبانی از محصولات متنوع کشاورزی\n✓ رابط کاربری ساده و زیبا"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="6dp"
+                    />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- دکمه اشتراک‌گذاری -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="اشتراک‌گذاری اپلیکیشن"
+
+            app:iconGravity="textStart"
+            style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+        <!-- لینک‌های اجتماعی -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageButton
+                android:id="@+id/btn_instagram"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_margin="8dp"/>
+
+            <ImageButton
+                android:id="@+id/btn_telegram"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_margin="8dp"/>
+
+            <ImageButton
+                android:id="@+id/btn_website"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_website"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+
+        <!-- کپی‌رایت -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="© 2024 فاکتور هوشمند کشاورزی\nکلیه حقوق محفوظ است."
+            android:textSize="12sp"
+
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</ScrollView>

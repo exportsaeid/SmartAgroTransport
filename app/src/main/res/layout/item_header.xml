@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1976D2"
+    android:layoutDirection="rtl"
+    android:paddingVertical="12dp">
+
+    <!-- ردیف -->
+    <TextView
+        android:id="@+id/headerRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ردیف"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerProductName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.06"
+        tools:ignore="MissingConstraints" />
+
+    <!-- نام محصول -->
+    <TextView
+        android:id="@+id/headerProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="نام محصول"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerWeight"
+        app:layout_constraintStart_toEndOf="@+id/headerRow"
+        app:layout_constraintWidth_percent="0.12"
+        tools:ignore="MissingConstraints" />
+
+    <!-- وزن -->
+    <TextView
+        android:id="@+id/headerWeight"
+        tools:ignore="MissingConstraints"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="وزن"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerUnitPrice"
+        app:layout_constraintStart_toEndOf="@+id/headerProductName"
+        app:layout_constraintWidth_percent="0.08" />
+
+    <!-- قیمت واحد -->
+    <TextView
+        tools:ignore="MissingConstraints"
+        android:id="@+id/headerUnitPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="قیمت واحد"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerName"
+        app:layout_constraintStart_toEndOf="@+id/headerWeight"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <!-- نام فروشنده -->
+    <TextView
+        tools:ignore="MissingConstraints"
+        android:id="@+id/headerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="فروشنده"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerMobile"
+        app:layout_constraintStart_toEndOf="@+id/headerUnitPrice"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <!-- موبایل -->
+    <TextView
+        tools:ignore="MissingConstraints"
+        android:id="@+id/headerMobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="موبایل"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerAddress"
+        app:layout_constraintStart_toEndOf="@+id/headerName"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <!-- آدرس -->
+    <TextView
+        tools:ignore="MissingConstraints"
+        android:id="@+id/headerAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="آدرس"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerNotes"
+        app:layout_constraintStart_toEndOf="@+id/headerMobile"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <!-- توضیحات -->
+    <TextView
+        tools:ignore="MissingConstraints"
+        android:id="@+id/headerNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="توضیحات"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerRowTotal"
+        app:layout_constraintStart_toEndOf="@+id/headerAddress"
+        app:layout_constraintWidth_percent="0.12" />
+
+    <!-- جمع ردیف -->
+    <TextView
+        tools:ignore="MissingConstraints"
+        android:id="@+id/headerRowTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="جمع ردیف"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/headerActions"
+        app:layout_constraintStart_toEndOf="@+id/headerNotes"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <!-- عملیات -->
+    <TextView
+        tools:ignore="MissingConstraints"
+        android:id="@+id/headerActions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="عملیات"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/headerRowTotal"
+        app:layout_constraintWidth_percent="0.07" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

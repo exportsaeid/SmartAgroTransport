@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvInvoiceNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فاکتور: F14040001"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3" />
+
+        <TextView
+            android:id="@+id/tvTruck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ماشین: -"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvDriver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="راننده: -"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تاریخ بارگیری: -"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvTransportCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="هزینه حمل: تعیین نشده"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginTop="8dp" />
+
+        <!-- اطلاعات ترخیص ایرانی -->
+        <TextView
+            android:id="@+id/tvClearanceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ترخیص‌کار ایرانی: -"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvClearancePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تلفن: -"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvBorderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مرز: -"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvClearanceCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="هزینه ترخیص: 0 تومان"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#FF5722" />
+
+        <!-- اطلاعات جدید: تحویل به طرف عراقی -->
+        <TextView
+            android:id="@+id/tvIraqiInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تحویل به عراقی: ثبت نشده"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#D81B60"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:background="#FFF3E0"
+            android:padding="8dp" />
+        <TextView
+            android:id="@+id/tvBuyerDeliveryInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تحویل به خریدار: ثبت نشده"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:background="#E8F5E8"
+            android:padding="8dp" />
+        <!-- دکمه‌ها -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnEditShipment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ترخیص ایرانی"
+                android:backgroundTint="#4CAF50"
+                android:paddingRight="40dp"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp" />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/btnIraqiHandover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="40dp"
+                android:text="ترخیصکار عراق"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+        <!-- نمایش وضعیت تحویل به خریدار -->
+
+        <Button
+            android:id="@+id/btnBuyerDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تحویل به خریدار"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

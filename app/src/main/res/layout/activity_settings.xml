@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA"
+    android:padding="16dp"
+    android:layoutDirection="ltr">
+
+    <!-- هدر با ایموجی -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:id="@+id/backButtonSettings"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="برگشت"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="6dp"
+            app:tint="#1976D2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📞 ارتباط با ما"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <!-- کارت اطلاعات تماس -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- آیکون واتساپ -->
+            <ImageView
+                android:id="@+id/imgWhatsapp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/circle_light_green_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp"
+                android:src="@drawable/ic_whatsapp" />
+
+            <!-- متن ارتباط با پشتیبانی -->
+            <TextView
+                android:id="@+id/tvSupportText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="📱 ارتباط با پشتیبانی"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- شماره تلفن (قابل کلیک) -->
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:text="📞 +989010388244"
+                android:textColor="#1976D2"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_blue_bg" />
+
+            <!-- ایمیل پشتیبانی (قابل کلیک) -->
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:text=" nobarexport@gmail.com"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:background="?attr/selectableItemBackground"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- توضیحات -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⏰ پاسخگویی: ۹ صبح تا ۹ شب"
+        android:textSize="14sp"
+        android:textColor="#999999"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- نسخه اپلیکیشن -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📱 نسخه ۱.۰.۰"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:gravity="center" />
+
+</LinearLayout>

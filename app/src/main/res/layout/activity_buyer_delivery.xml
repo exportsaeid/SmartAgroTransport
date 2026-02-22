@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FA"
+    android:padding="16dp"
+    >
+
+    <!-- هدر با ایموجی -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#92C655"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backButtonDelivery"
+            android:layout_width="34dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="برگشت"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📦 تحویل نهایی به خریدار"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- جستجو با ایموجی -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="🔍 جستجو در بارگیری‌ها..."
+        android:layout_marginBottom="16dp"
+        android:iconifiedByDefault="false"
+        app:queryBackground="@android:color/transparent"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp" />
+
+    <!-- پیام وقتی لیست خالی است - با ایموجی -->
+    <TextView
+        android:id="@+id/tvEmptyBuyerDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📭 هیچ بارگیری آماده تحویل به خریدار وجود ندارد.\n🔄 ابتدا تحویل به ترخیص‌کار عراقی را ثبت کنید."
+        android:textSize="18sp"
+        android:textColor="#757575"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:lineSpacingExtra="8dp"
+        android:visibility="gone" />
+
+    <!-- لیست -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerBuyerDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

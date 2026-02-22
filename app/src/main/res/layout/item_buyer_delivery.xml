@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvInvoiceNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فاکتور: F14040001"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3" />
+
+<!--        &lt;!&ndash; نمایش وضعیت تحویل به خریدار &ndash;&gt;-->
+        <TextView
+            android:id="@+id/tvBuyerDeliveryInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تحویل به خریدار: ثبت نشده"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:background="#E8F5E8"
+            android:padding="8dp" />
+        <Button
+            android:id="@+id/btnBuyerDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تحویل به خریدار"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

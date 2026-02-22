@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/tvInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فاکتور: F14040001"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3" />
+
+        <TextView
+            android:id="@+id/tvInvoiceAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="مبلغ فاکتور: 100,000,000 تومان"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvIranianTransport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="کرایه ماشین ایرانی: 5,000,000 تومان"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvIranianClearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ترخیص ایرانی: 2,000,000 تومان"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvIraqiCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="هزینه طرف عراقی: 7,000,000 تومان"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvReceived"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="واریزی خریدار: 120,000,000 تومان"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvProfit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="سود خالص: +6,000,000 تومان"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:gravity="center" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

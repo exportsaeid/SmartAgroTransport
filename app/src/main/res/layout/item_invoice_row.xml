@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- خط جداکننده بالا -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+    <!-- ردیف اصلی - عرض‌ها دقیقاً مشابه هدر -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="4dp">
+
+        <!-- ردیف -->
+        <TextView
+            android:id="@+id/tvRow"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- نام محصول -->
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textSize="14sp"
+            android:paddingHorizontal="4dp" />
+
+        <!-- وزن -->
+        <TextView
+            android:id="@+id/tvWeight"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <!-- قیمت واحد -->
+        <TextView
+            android:id="@+id/tvUnitPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <!-- نام فروشنده -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textSize="14sp"
+            android:paddingHorizontal="4dp" />
+
+        <!-- موبایل -->
+        <TextView
+            android:id="@+id/tvMobile"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textSize="14sp" />
+
+        <!-- آدرس -->
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textSize="14sp"
+            android:paddingHorizontal="4dp" />
+
+        <!-- توضیحات -->
+        <TextView
+            android:id="@+id/tvNotes"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:paddingHorizontal="4dp" />
+
+        <!-- جمع ردیف -->
+        <TextView
+            android:id="@+id/tvRowTotal"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#d32f2f"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- عملیات -->
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="ویرایش"
+                android:src="@android:drawable/ic_menu_edit" />
+
+            <ImageButton
+                android:id="@+id/btnRemove"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="حذف"
+                android:src="@android:drawable/ic_delete" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- خط جداکننده پایین -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+</LinearLayout>

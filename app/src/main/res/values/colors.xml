@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- رنگ اصلی اپ -->
+    <color name="colorPrimary">#1565C0</color>
+    <!-- رنگ تیره‌تر برای حالت های خاص یا حاشیه -->
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <!-- رنگ ثانویه -->
+    <color name="colorAccent">#FF5722</color>
+
+    <!-- رنگ خاکستری روشن -->
+    <color name="light_gray">#F5F5F5</color>
+
+    <color name="purple_700">#7B1FA2</color>
+    <color name="gray_600">#757575</color>
+
+    <!-- رنگ‌های پروژه -->
+    <color name="primary">#4CAF50</color>
+    <color name="secondary">#757575</color>
+    <color name="secondary_text">#666666</color>
+
+    <!-- ===== رنگ‌های جدید اضافه شده ===== -->
+    <!-- رنگ جداکننده برای لیست فایل‌های پیوست -->
+    <color name="divider_color">#E0E0E0</color>
+
+    <!-- رنگ‌های مخصوص فایل‌های پیوست -->
+    <color name="attachment_saved">#4CAF50</color>   <!-- سبز برای فایل‌های ذخیره شده -->
+    <color name="attachment_new">#FF9800</color>     <!-- نارنجی برای فایل‌های جدید -->
+    <color name="attachment_view">#2196F3</color>    <!-- آبی برای دکمه مشاهده -->
+    <color name="attachment_delete">#F44336</color>  <!-- قرمز برای دکمه حذف -->
+
+    <!-- رنگ پس‌زمینه آیتم فایل پیوست -->
+    <color name="attachment_item_bg">#F8F9FA</color>
+
+
+
+    <color name="bottom_nav_icon_color">#FF6200EE</color>
+    <color name="bottom_nav_text_color">#FF6200EE</color>
+    <!-- ================================= -->
+</resources>
